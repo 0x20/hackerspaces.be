@@ -2,15 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-	<title>{{ page.title }} - Hyde Sample</title>
+	<title>Consectetur - Hyde Sample</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<base href="http://hackerspaces.be/">
 
     <!-- Le styles -->
-    <link href="../media/css/bootstrap.css" rel="stylesheet">
-    <link href="../media/css/custom.css" rel="stylesheet">
+    <link href="./media/css/bootstrap.css" rel="stylesheet">
+    <link href="./media/css/custom.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -38,13 +39,53 @@
   <body>
   <div class="container">
 
-		{% include "nav.html" %}
-
-
-
-		{% block content %}
 		
-		{% endblock %}
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Belgian Hackerspaces</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="/">Main Page</a></li>
+              <li><a href="/about.html">About</a></li>
+            </ul>
+   
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+
+
+		
+
+<div class="row">
+	  
+	         <div class="span12">
+<h1>Consectetur</h1>
+
+<!-- Hyde::Excerpt::Begin -->
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+<!-- Hyde::Excerpt::End -->
+<!-- Hyde::Article::Begin -->
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+<blockquote>
+<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+</blockquote>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<blockquote>
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+</blockquote>
+<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. </p>
+<!-- Hyde::Article::End -->
+
+</div>
+
 
 
 
