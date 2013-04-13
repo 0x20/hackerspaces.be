@@ -1,0 +1,25 @@
+{% extends "page.html" %}
+{% hyde
+title: "Hello World!"
+created: 2013-04-12 16:12:00
+abstract: "This is a test."
+%}
+
+{% block article %}
+{% excerpt %}
+Testikng one two tree. 
+{% endexcerpt %}
+{% article %}
+{% markdown %}
+
+Is this thing on?
+> com more testing 
+
+And then some! 
+
+
+{% endmarkdown %}
+{% endarticle %}
+{% endblock %}
+																										
+
