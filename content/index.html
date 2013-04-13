@@ -6,7 +6,7 @@
 {% if node.name == "posts" %}
 	{% for post in node.walk_pages  %}
 	{% if not post.listing and not post.exclude %}
-	{% if forloop.first %}
+	{% if forloop.last %}
 			<h2>{{ post.title }}</h2>
 			<abbr>Posted on {{ post.created|date:"D, N j Y" }}</abbr>
 			<!--
