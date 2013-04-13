@@ -2,6 +2,16 @@
 {% block content %}
 <div class="row">
 <div class="span6">
+
+{% markdown %}
+A hackerspace (also referred to as a hacklab, makerspace, or hackspace) is a community-operated physical space where people with common interests, often in computers, technology, science, digital art or electronic art, can meet, socialise and/or collaborate.
+
+Hackerspaces can be viewed as open community labs incorporating elements of machine shops, workshops and/or studios where hackers can come together to share resources and knowledge to build and make things.
+
+Many hackerspaces participate in the use and development of free software, open hardware, and alternative media. They are often physically located in infoshops, social centers, adult education centers, public schools, or on university campuses, but may relocate to industrial or warehouse space when they need more room.
+
+{% endmarkdown %}
+
 {% for node in page.node.walk %}
 {% if node.name == "posts" %}
 	{% for post in node.walk_pages  %}
@@ -30,5 +40,20 @@
 {% endfor %}
 </div>
 <div class="span6">
-<object width="400" height="300"> <param name="flashvars" value="offsite=true&lang=en-us&page_show_url=%2Fsearch%2Fshow%2F%3Fq%3Dhsbxl%2BOR%2Bvoidwarranties%26m%3Dtags%26ss%3D0%26ct%3D0%26mt%3Dall%26adv%3D1&page_show_back_url=%2Fsearch%2F%3Fq%3Dhsbxl%2BOR%2Bvoidwarranties%26m%3Dtags%26ss%3D0%26ct%3D0%26mt%3Dall%26adv%3D1&method=flickr.photos.search&api_params_str=&api_tags=hsbxl%2COR%2Cvoidwarranties&api_tag_mode=bool&api_media=all&api_sort=date-posted-desc&jump_to=&start_index=0"></param> <param name="movie" value="http://www.flickr.com/apps/slideshow/show.swf?v=124984"></param> <param name="allowFullScreen" value="true"></param><embed type="application/x-shockwave-flash" src="http://www.flickr.com/apps/slideshow/show.swf?v=124984" allowFullScreen="true" flashvars="offsite=true&lang=en-us&page_show_url=%2Fsearch%2Fshow%2F%3Fq%3Dhsbxl%2BOR%2Bvoidwarranties%26m%3Dtags%26ss%3D0%26ct%3D0%26mt%3Dall%26adv%3D1&page_show_back_url=%2Fsearch%2F%3Fq%3Dhsbxl%2BOR%2Bvoidwarranties%26m%3Dtags%26ss%3D0%26ct%3D0%26mt%3Dall%26adv%3D1&method=flickr.photos.search&api_params_str=&api_tags=hsbxl%2COR%2Cvoidwarranties&api_tag_mode=bool&api_media=all&api_sort=date-posted-desc&jump_to=&start_index=0" width="400" height="300"></embed></object></div>
+<ul>
+{% for node in page.node.walk %}
+{% if node.name == "spaces" %}
+	{% for post in node.walk_pages  %}
+	{% if not post.listing and not post.exclude %}
+			<li><a href="{{ post.url }}">{{ post.title }}</a> {{ post.location }}</li>
+			<!--
+			{% render_article post %}
+			<p><a href="{{ post.url }}">#</a></p>
+				-->
+	{% endif %}
+	{% endfor %}
+{% endif %}
+{% endfor %}
+</ul>
+</div>
 {% endblock %}
