@@ -1,0 +1,63 @@
+[27/Apr/2011:03:01:29] ENGINE Bus STARTING
+[27/Apr/2011:03:01:29] ENGINE Started monitor thread '_TimeoutMonitor'.
+[27/Apr/2011:03:01:29] ENGINE Serving on localhost:5001
+[27/Apr/2011:03:01:29] ENGINE Bus STARTED
+[27/Apr/2011:03:01:51] ENGINE Keyboard Interrupt: shutting down bus
+[27/Apr/2011:03:01:51] ENGINE Bus STOPPING
+[27/Apr/2011:03:01:51] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('localhost', 5001)) shut down
+[27/Apr/2011:03:01:51] ENGINE Stopped thread '_TimeoutMonitor'.
+[27/Apr/2011:03:01:51] ENGINE Bus STOPPED
+[27/Apr/2011:03:01:51] ENGINE Bus EXITING
+[27/Apr/2011:03:01:51] ENGINE Bus EXITED
+[27/Apr/2011:03:01:51] ENGINE Waiting for child threads to terminate...
+[27/Apr/2011:03:02:04] ENGINE Bus STARTING
+[27/Apr/2011:03:02:04] ENGINE Started monitor thread '_TimeoutMonitor'.
+[27/Apr/2011:03:02:04] ENGINE Serving on localhost:5001
+[27/Apr/2011:03:02:04] ENGINE Bus STARTED
+[27/Apr/2011:03:02:18] ENGINE Keyboard Interrupt: shutting down bus
+[27/Apr/2011:03:02:18] ENGINE Bus STOPPING
+[27/Apr/2011:03:02:18] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('localhost', 5001)) shut down
+[27/Apr/2011:03:02:18] ENGINE Stopped thread '_TimeoutMonitor'.
+[27/Apr/2011:03:02:18] ENGINE Bus STOPPED
+[27/Apr/2011:03:02:18] ENGINE Bus EXITING
+[27/Apr/2011:03:02:18] ENGINE Bus EXITED
+[27/Apr/2011:03:02:18] ENGINE Waiting for child threads to terminate...
+[27/Apr/2011:03:22:23] ENGINE Bus STARTING
+[27/Apr/2011:03:22:23] ENGINE Started monitor thread '_TimeoutMonitor'.
+[27/Apr/2011:03:22:23] ENGINE Serving on localhost:5001
+[27/Apr/2011:03:22:23] ENGINE Bus STARTED
+[27/Apr/2011:03:22:24] ENGINE Keyboard Interrupt: shutting down bus
+[27/Apr/2011:03:22:24] ENGINE Bus STOPPING
+[27/Apr/2011:03:22:24] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('localhost', 5001)) shut down
+[27/Apr/2011:03:22:24] ENGINE Stopped thread '_TimeoutMonitor'.
+[27/Apr/2011:03:22:24] ENGINE Bus STOPPED
+[27/Apr/2011:03:22:24] ENGINE Bus EXITING
+[27/Apr/2011:03:22:24] ENGINE Bus EXITED
+[27/Apr/2011:03:22:24] ENGINE Waiting for child threads to terminate...
+[27/Apr/2011:03:26:03] ENGINE Bus STARTING
+[27/Apr/2011:03:26:03] ENGINE Started monitor thread '_TimeoutMonitor'.
+[27/Apr/2011:03:26:03] ENGINE Serving on localhost:5001
+[27/Apr/2011:03:26:03] ENGINE Bus STARTED
+[27/Apr/2011:03:26:18] HTTP Traceback (most recent call last):
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 645, in respond
+    response.body = self.handler()
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 188, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 29, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/Users/Shared/source/hyde/hydeengine/__init__.py", line 142, in index
+    return serve_file(deploy_folder.child(page.name))
+AttributeError: 'NoneType' object has no attribute 'name'
+
+[27/Apr/2011:03:28:26] ENGINE Keyboard Interrupt: shutting down bus
+[27/Apr/2011:03:28:26] ENGINE Bus STOPPING
+[27/Apr/2011:03:28:26] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('localhost', 5001)) shut down
+[27/Apr/2011:03:28:26] ENGINE Stopped thread '_TimeoutMonitor'.
+[27/Apr/2011:03:28:26] ENGINE Bus STOPPED
+[27/Apr/2011:03:28:26] ENGINE Bus EXITING
+[27/Apr/2011:03:28:26] ENGINE Bus EXITED
+[27/Apr/2011:03:28:26] ENGINE Waiting for child threads to terminate...
+[27/Apr/2011:03:32:29] ENGINE Bus STARTING
+[27/Apr/2011:03:32:29] ENGINE Started monitor thread '_TimeoutMonitor'.
+[27/Apr/2011:03:32:29] ENGINE Serving on localhost:5001
+[27/Apr/2011:03:32:29] ENGINE Bus STARTED
