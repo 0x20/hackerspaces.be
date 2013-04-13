@@ -1,6 +1,8 @@
 *~
 *.pyc
 .DS_Store
+deploy/*
+deploy_tmp/*
 *.cprof
 *.profile
 *.log
