@@ -30,6 +30,7 @@ OR
 	easy_install Django Markdown pyYAML
 
 The schript that's triggered on the server does :
+
 	cd ~/hackerspaces.be
 	git pull
 	cd
