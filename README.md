@@ -29,7 +29,7 @@ OR
 
 	easy_install Django Markdown pyYAML
 
-The schript that's triggered on the server does :
+The script that's triggered on the server does :
 
 	cd ~/hackerspaces.be
 	git pull
@@ -37,3 +37,7 @@ The schript that's triggered on the server does :
 	rm -rf ~/staticnew/*
 	python ./hyde/hyde.py  -g -s /home/hackerspaces/hackerspaces.be -d /home/hackerspaces/staticnew
 	rsync -rtu --delete-delay ~/staticnew/ ~/static/
+
+If you are developing use it with the -k option, it'll keep watching the dir for changes and rebuild.
+
+	python ./hyde/hyde.py  -g -s /home/hackerspaces/hackerspaces.be -d /home/hackerspaces/staticnew -k
