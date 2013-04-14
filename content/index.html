@@ -12,7 +12,7 @@ Hackerspaces can be viewed as open community labs incorporating elements of mach
 Many hackerspaces participate in the use and development of free software, open hardware, and alternative media. They are often physically located in infoshops, social centers, adult education centers, public schools, or on university campuses, but may relocate to industrial or warehouse space when they need more room.
 
 {% endmarkdown %}
-
+	<!--
 {% for node in page.node.walk %}
 {% if node.name == "posts" %}
 	{% for post in node.walk_pages  %}
@@ -22,10 +22,10 @@ Many hackerspaces participate in the use and development of free software, open 
 			<abbr>Posted on {{ post.created|date:"D, N j Y" }}</abbr>
 				{% render_excerpt post %}
 				<a href="{{ post.url }}">Read more</a>
-			<!--
+		
 			{% render_article post %}
 			<p><a href="{{ post.url }}">#</a></p>
-				-->
+
 			<hr />
 			Previous  posts:
 		{% else %}
@@ -36,13 +36,16 @@ Many hackerspaces participate in the use and development of free software, open 
 			</p>
 		{% endif %}
 	{% endif %}
-	{% endfor %}
+	{% endfor %}	
 {% endif %}
 {% endfor %}
+			-->
 </div>
 <div class="span6">
 <ul>
+{% markdown %}
 ####Spaces in Belgium
+{% endmarkdown %}
 {% for node in page.node.walk %}
 {% if node.name == "spaces" %}
 	{% for post in node.walk_pages  %}
@@ -56,6 +59,15 @@ Many hackerspaces participate in the use and development of free software, open 
 	{% endfor %}
 {% endif %}
 {% endfor %}
+
+{% markdown %}
+####Mailinglist.
+Different space have their own list, the general cross-space list is : "42  For the answers to life, the universe and everything... "
+
+You can [subscribe here](http://discuss.hackerspaces.be/listinfo.cgi/42-hackerspaces.be) for any technical or other questions.
+
+{% endmarkdown %}
+
 </ul>
 </div>
 {% endblock %}
