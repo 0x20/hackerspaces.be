@@ -12,34 +12,7 @@ Hackerspaces can be viewed as open community labs incorporating elements of mach
 Many hackerspaces participate in the use and development of free software, open hardware, and alternative media. They are often physically located in infoshops, social centers, adult education centers, public schools, or on university campuses, but may relocate to industrial or warehouse space when they need more room.
 
 {% endmarkdown %}
-	<!--
-{% for node in page.node.walk %}
-{% if node.name == "posts" %}
-	{% for post in node.walk_pages  %}
-	{% if not post.listing and not post.exclude %}
-	{% if forloop.first %}
-			<h2>{{ post.title }}</h2>
-			<abbr>Posted on {{ post.created|date:"D, N j Y" }}</abbr>
-				{% render_excerpt post %}
-				<a href="{{ post.url }}">Read more</a>
-		
-			{% render_article post %}
-			<p><a href="{{ post.url }}">#</a></p>
 
-			<hr />
-			Previous  posts:
-		{% else %}
-			<p>{{ post.created|date:"Y-m-d" }} - <a href="{{ post.url }}">{{ post.title }}</a> 
-			{% if post.abstract %}
-			: <i> {{ post.abstract }} </i>
-			{% endif %}
-			</p>
-		{% endif %}
-	{% endif %}
-	{% endfor %}	
-{% endif %}
-{% endfor %}
-			-->
 </div>
 <div class="span6">
 <ul>
@@ -51,10 +24,7 @@ Many hackerspaces participate in the use and development of free software, open 
 	{% for post in node.walk_pages  %}
 	{% if not post.listing and not post.exclude %}
 			<li><a href="{{ post.url }}">{{ post.title }}</a> {{ post.location }}</li>
-			<!--
-			{% render_article post %}
-			<p><a href="{{ post.url }}">#</a></p>
-				-->
+
 	{% endif %}
 	{% endfor %}
 {% endif %}
