@@ -1,7 +1,7 @@
 hackerspaces.be
 ===============
 
-Git backend for the content of hackerspaces.be feel free to fork, and to send me updates. Once I know you're not a spammer, you can get commit rights. 
+Git backend for the content of http://hackerspaces.be feel free to fork, and to send me updates. Once I know you're not a spammer, you can get commit rights. 
 
 
 
@@ -32,7 +32,7 @@ If you are developing use it with the -k option, it'll keep watching the dir for
 
 	python ./hyde/hyde.py  -g -s /home/hackerspaces/hackerspaces.be -d /home/hackerspaces/staticnew -k
 	
-#More info on Hyde
+###More info on Hyde
 
 This document should give enough information to get you up and running. Check
 the [wiki](http://wiki.github.com/lakshmivyas/hyde) for detailed documentation.
