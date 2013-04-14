@@ -3,17 +3,7 @@ hackerspaces.be
 
 Git backend for the content of hackerspaces.be feel free to fork, and to send me updates. Once I know you're not a spammer, you can get commit rights. 
 
-#SETUP
 
-This document should give enough information to get you up and running. Check
-the [wiki](http://wiki.github.com/lakshmivyas/hyde) for detailed documentation.
-
-Hyde is a static website generator with the power of Django templates behind it.
-You can read more about its conception, history and features [here][1] and
-[here][2].
-
-[1]: http://www.ringce.com/products/hyde/hyde.html
-[2]: http://www.ringce.com/blog/2009/introducing_hyde.html
 
 
 ## Basic Installation
@@ -41,3 +31,15 @@ The script that's triggered on the server does :
 If you are developing use it with the -k option, it'll keep watching the dir for changes and rebuild.
 
 	python ./hyde/hyde.py  -g -s /home/hackerspaces/hackerspaces.be -d /home/hackerspaces/staticnew -k
+	
+#More info on Hyde
+
+This document should give enough information to get you up and running. Check
+the [wiki](http://wiki.github.com/lakshmivyas/hyde) for detailed documentation.
+
+Hyde is a static website generator with the power of Django templates behind it.
+You can read more about its conception, history and features [here][1] and
+[here][2].
+
+[1]: http://www.ringce.com/products/hyde/hyde.html
+[2]: http://www.ringce.com/blog/2009/introducing_hyde.html
