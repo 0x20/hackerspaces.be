@@ -28,3 +28,11 @@ python goodies are needed based on the features you may use.
 OR
 
 	easy_install Django Markdown pyYAML
+
+The schript that's triggered on the server does :
+	cd ~/hackerspaces.be
+	git pull
+	cd
+	rm -rf ~/staticnew/*
+	python ./hyde/hyde.py  -g -s /home/hackerspaces/hackerspaces.be -d /home/hackerspaces/staticnew
+	rsync -rtu --delete-delay ~/staticnew/ ~/static/
