@@ -3,27 +3,27 @@
     title: "About"
     created: 2013-04-14 00:25:00
 %}
-
+{% load email_obfuscator %}
 {% block content %}
-{% markdown %}
-####Spaces in Belgium
-{% endmarkdown %}
+<h2>Contact Details Of The Belgian Spaces.</h2>
 {% for node in page.node.walk %}
 {% if node.name == "spaces" %}
 	{% for post in node.walk_pages  %}
 	{% if not post.listing and not post.exclude %}
-			<h6>{{ post.title }}</h6>
+			<h4>{{ post.title }}</h4>
 				<ul>
-				<li><a href="https://maps.google.com/?q={{ post.Location }}">{{ post.Location }}</a><li>
-				<li>{{ post.Contact }}</li>
-				<li>{{ post.site }}</li>
+				<li><strong>Location:</strong> <a href="https://maps.google.com/?q={{ post.Location }}">{{ post.Location }}</a></li>
+				<li><strong>Email:</strong> {{ post.Contact|obfuscate_mailto }}</li>
+				<li><strong>Irc:</strong> {{ post.irc }}</li>
+				<li><strong>Website:</strong> <a href="{{ post.site }}" title="{{ post.title }} homepage">{{ post.site }}</a></li>
 				</ul>
 
 	{% endif %}
 	{% endfor %}
 {% endif %}
 {% endfor %}
-
+{% load email_obfuscator %}
+{{ 'your@email.com'|obfuscate_mailto }}
 
 
 {% endblock %}
