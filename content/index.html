@@ -27,7 +27,7 @@ Many hackerspaces participate in the use and development of free software, open 
 {% if node.name == "spaces" %}
 	{% for post in node.walk_pages  %}
 	{% if not post.listing and not post.exclude %}
-			<li><a href="{{ post.url }}">{{ post.title }}</a> {{ post.location }}</li>
+			<li><a href="{{ post.url }}">{{ post.title }}</a> {{ post.city }}</li>
 
 	{% endif %}
 	{% endfor %}

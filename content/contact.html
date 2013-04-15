@@ -1,0 +1,29 @@
+{% extends "page.html" %}
+{% hyde
+    title: "About"
+    created: 2013-04-14 00:25:00
+%}
+
+{% block content %}
+{% markdown %}
+####Spaces in Belgium
+{% endmarkdown %}
+{% for node in page.node.walk %}
+{% if node.name == "spaces" %}
+	{% for post in node.walk_pages  %}
+	{% if not post.listing and not post.exclude %}
+			<h6>{{ post.title }}</h6>
+				<ul>
+				<li><a href="https://maps.google.com/?q={{ post.Location }}">{{ post.Location }}</a><li>
+				<li>{{ post.Contact }}</li>
+				<li>{{ post.site }}</li>
+				</ul>
+
+	{% endif %}
+	{% endfor %}
+{% endif %}
+{% endfor %}
+
+
+
+{% endblock %}
