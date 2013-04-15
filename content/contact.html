@@ -12,7 +12,7 @@
 	{% if not post.listing and not post.exclude %}
 			<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
 				<ul>
-				<li><strong>Location:</strong> <a href="https://maps.google.com/?q={{ post.Location }}">{{ post.location }}</a></li>
+				<li><strong>Location:</strong> <a href="https://maps.google.com/?q={{ post.location }}">{{ post.location }}</a></li>
 				<li><strong>Email:</strong> {{ post.contact|obfuscate_mailto }}</li>
 				<li><strong>Irc:</strong> {{ post.irc }}</li>
 				<li><strong>Website:</strong> <a href="{{ post.site }}" title="{{ post.title }} homepage">{{ post.site }}</a></li>
