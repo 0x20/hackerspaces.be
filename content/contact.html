@@ -5,11 +5,13 @@
 %}
 {% load email_obfuscator %}
 {% block content %}
+<div class="row">
 <h2>Contact Details Of The Belgian Spaces.</h2>
 {% for node in page.node.walk %}
 {% if node.name == "spaces" %}
 	{% for post in node.walk_pages  %}
 	{% if not post.listing and not post.exclude %}
+       <div class="span4">
 			<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
 				<ul>
 				<li><strong>Location:</strong> <a href="https://maps.google.com/?q={{ post.location }}">{{ post.location }}</a></li>
@@ -17,13 +19,12 @@
 				<li><strong>Irc:</strong> {{ post.irc }}</li>
 				<li><strong>Website:</strong> <a href="{{ post.site }}" title="{{ post.title }} homepage">{{ post.site }}</a></li>
 				</ul>
-
+		</div>
 	{% endif %}
 	{% endfor %}
 {% endif %}
 {% endfor %}
-{% load email_obfuscator %}
-{{ 'your@email.com'|obfuscate_mailto }}
+</div>
 
 
 {% endblock %}
