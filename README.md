@@ -25,10 +25,8 @@ OR
 
 The script that's triggered on the server does :
 
-	cd ~/hackerspaces.be
-	git pull
-	cd
-	python ./hyde/hyde.py  -g -s /home/hackerspaces/hackerspaces.be -d /home/hackerspaces/staticnew
+	cd ~/hackerspaces.be && git pull
+	python ~/hyde/hyde.py  -g -s ~/hackerspaces.be -d ~/staticnew
 	rsync -rtu --delete-delay ~/staticnew/ ~/static/
 
 If you are developing use it with the -k option, it'll keep watching the dir for changes and rebuild.
