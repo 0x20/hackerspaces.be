@@ -17,11 +17,11 @@ The very basic installation of hyde only needs Django, Markdown and pyYAML. More
 python goodies are needed based on the features you may use.
 
     pip install -r requirements.txt
-    pip install email_obfuscator
+    pip install django-email-obfuscator
 
 OR
 
-	easy_install Django Markdown pyYAML email_obfuscator
+	easy_install Django Markdown pyYAML django-email-obfuscator
 
 The script that's triggered on the server does :
 
