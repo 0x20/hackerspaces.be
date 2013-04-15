@@ -10,7 +10,7 @@
 {% if node.name == "spaces" %}
 	{% for post in node.walk_pages  %}
 	{% if not post.listing and not post.exclude %}
-			<h4>{{ post.title }}</h4>
+			<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
 				<ul>
 				<li><strong>Location:</strong> <a href="https://maps.google.com/?q={{ post.Location }}">{{ post.Location }}</a></li>
 				<li><strong>Email:</strong> {{ post.Contact|obfuscate_mailto }}</li>
