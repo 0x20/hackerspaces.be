@@ -35,8 +35,13 @@ If you are developing use it with the -k option, it'll keep watching the dir for
 
 	python ./hyde/hyde.py  -g -s /home/hackerspaces/hackerspaces.be -d /home/hackerspaces/staticnew -k
 
+## Whishlist
 
-###More info on Hyde
+* Fancy imageslider on frontpage (every site needs one ;-)
+* Logo's of spaces on the page.
+* Contact page with all the adresses
+	
+##More info on Hyde
 
 This document should give enough information to get you up and running. Check
 the [wiki](http://wiki.github.com/lakshmivyas/hyde) for detailed documentation.
