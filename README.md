@@ -39,7 +39,6 @@ If you are developing use it with the -k option, it'll keep watching the dir for
 
 * Fancy imageslider on frontpage (every site needs one ;-)
 * Logo's of spaces on the page.
-* Contact page with all the adresses
 	
 ##More info on Hyde
 
