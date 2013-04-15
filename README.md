@@ -11,7 +11,7 @@ You are encouraged to write scripts, for instance, one that would pull a calende
 
 ## Basic Installation
 
-Get the hyde source by cloning [this repository](https://github.com/hyde/hyde).
+Get the hyde source by cloning [this repository](https://github.com/lakshmivyas/hyde), I should've used [this repository](https://github.com/hyde/hyde) but I was drunk, maybe someone can provide an updated version.
 
 The very basic installation of hyde only needs Django, Markdown and pyYAML. More
 python goodies are needed based on the features you may use.
