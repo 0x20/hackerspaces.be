@@ -9,3 +9,5 @@ deploy_tmp/*
 pylint*
 *.tmproj
 test_site
+site.log
+settings.pyc
