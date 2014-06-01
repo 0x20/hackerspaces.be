@@ -2,10 +2,31 @@
 {% block content %}
 
 <div class="row">
-    <div class="span12">
+    <div class="span8">
         <h1>{{ resource.meta.title }}</h1>
         {% block article %}
         {% endblock %}
+    </div>
+    <div class="span4">
+        <h3>Infos</h3>
+        <ul>
+            <li>
+                <strong>Website:</strong>
+                <a href="{{ resource.meta.site }}" title="{{ resource.meta.title }} homepage">
+                    {{ resource.meta.site }}
+                </a>
+            </li>
+            <li><strong>Location:</strong> <a href="https://maps.google.com/?q={{ resource.meta.location }}">{{ resource.meta.location }}</a></li>
+            {% if resource.meta.contact %}
+                <li><strong>Email:</strong> {{ resource.meta.contact }}</li>
+            {% endif %}
+            {% if resource.meta.irc %}
+                <li><strong>Irc:</strong> {{ resource.meta.irc }}</li>
+            {% endif %}
+            {% for name, val in resource.meta.extra %}
+                <li><strong>{{ name }}</strong>: {{val|markdown}}</li>
+            {% endfor %}
+        </ul>
     </div>
 </div>
 
