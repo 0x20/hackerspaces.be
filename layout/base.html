@@ -1,71 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-	<title>{% block title %}{{ resource.meta.title }}{% endblock %} - Hackespaces.be</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}{{ resource.meta.title }}{% endblock %} - Hackespaces.be</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-	<base href="/">
-	<link rel="alternate" type="application/rss+xml" title="Hackerspaces Belgium" href="https://github.com/0x20/hackerspaces.be/commits/master.atom" />
-    <!-- Le styles -->
-    <link href="../media/css/bootstrap.css" rel="stylesheet">
-    <link href="../media/css/custom.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-    </style>
-    <link href="./css/bootstrap-responsive.css" rel="stylesheet">
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <base href="/">
+  <link rel="alternate" type="application/rss+xml" title="Hackerspaces Belgium" href="https://github.com/0x20/hackerspaces.be/commits/master.atom" />
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+  <link href="../media/css/bootstrap.css" rel="stylesheet">
+  <link href="../media/css/custom.css" rel="stylesheet">
+  <link href="./css/bootstrap-responsive.css" rel="stylesheet">
 
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="../media/img/favicon.ico">
- </head>
+  <link rel="shortcut icon" href="../media/img/favicon.ico">
+</head>
 
-  <body>
+<body>
+  {% include "nav.html" %}
   <div class="container">
+    {% block fullpage %}
+      <div class="span7">
+        {% block content %}
+        {% endblock %}
+      </div>
+      <div class="span4">
+        {% block sidebar %}
+        {% endblock %}
+      </div>
+    {% endblock %}
+  </div>
 
-		{% include "nav.html" %}
+  <footer class="span12">
+    <hr>
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="../media/img/cc.png" title="This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License"/>
+    </a>
 
+    <a href="http://www.cornify.com" onclick="cornify_add();return false;">
+      <img src="http://www.cornify.com/assets/cornify.gif" width="61" height="16" border="0" alt="Cornify" />
+    </a>
 
+    <a href="https://github.com/0x20/hackerspaces.be/commits/master.atom">
+      <img alt="Atom Feed" style="border-width:0" src="../media/img/rss.png" title="Rss Feed For Your Convenience">
+    </a>
 
-		{% block content %}
+    <a href="https://github.com/0x20/hackerspaces.be">
+      <img alt="Atom Feed" style="border-width:0" src="../media/img/gh.png" title="Follow this on github"/>
+    </a>
+  </footer>
 
-		{% endblock %}
-
-
-
- </div>
-      <hr>
-
-      <footer>
-			<!--- creativecommons -->
-			<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
-				<img alt="Creative Commons License" style="border-width:0" src="../media/img/cc.png" title="This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License"/>
-			</a>
-			<!--- cornify -->
-			<a href="http://www.cornify.com" onclick="cornify_add();return false;">
-				<img src="http://www.cornify.com/assets/cornify.gif" width="61" height="16" border="0" alt="Cornify" /></a>
-				<script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
-			<!--- rss/atom -->
-			<a href="https://github.com/0x20/hackerspaces.be/commits/master.atom">
-				<img alt="Atom Feed" style="border-width:0" src="../media/img/rss.png" title="Rss Feed For Your Convenience"/></a>
-			</a>
-			<!--- GitHub -->
-			<a href="https://github.com/0x20/hackerspaces.be">
-				<img alt="Atom Feed" style="border-width:0" src="../media/img/gh.png" title="Follow this on github"/></a>
-			</a>
-      </footer>
-
-    </div> <!-- /container -->
-
-  	{% include "analytics.html" %}
+  {% include "analytics.html" %}
+  <script type="text/javascript" src="http://www.cornify.com/js/cornify.js">
+  </script>
 
   </body>
 </html>

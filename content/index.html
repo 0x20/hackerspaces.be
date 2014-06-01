@@ -3,49 +3,46 @@
     title: "Main Page"
     created: 2013-04-14 00:25:00
 ---
-{% block content %}
-<div class="row">
-<div class="span6">
 
+{% block content %}
 {% markdown %}
+
 ####What is a hackerspace?
 A hackerspace (also referred to as a hacklab, makerspace, or hackspace) is a community-operated physical space where people with common interests, often in computers, technology, science, digital art or electronic art, can meet, socialise and/or collaborate.
 
 Hackerspaces can be viewed as open community labs incorporating elements of machine shops, workshops and/or studios where hackers can come together to share resources and knowledge to build and make things.
 
 Many hackerspaces participate in the use and development of free software, open hardware, and alternative media.
-{% endmarkdown %}
 
-</div>
-<div class="span6">
+{% endmarkdown %}
+{% endblock %}
+
+{% block sidebar %}
+<h4>Spaces in Belgium</h4>
 <ul>
-{% markdown %}
-####Spaces in Belgium
-{% endmarkdown %}
-{% for node in node.walk() %}
+  {% for node in node.walk() %}
     {% if node.relative_path == "spaces" %}
-    	{% for post in node.walk_resources()  %}
-        	{% if not post.listing and not post.exclude %}
-        			<li><a href="{{ post.relative_path }}">{{ post.meta.title }}</a> {{ post.meta.city }}</li>
-        	{% endif %}
-    	{% endfor %}
+      {% for post in node.walk_resources()  %}
+        {% if not post.listing and not post.exclude %}
+            <li><a href="{{ post.relative_path }}">{{ post.meta.title }}</a> {{ post.meta.city }}</li>
+        {% endif %}
+      {% endfor %}
     {% endif %}
-{% endfor %}
+  {% endfor %}
+</ul>
 
-{% markdown %}
-####Agenda
+<h4>Agenda</h4>
+  {% markdown %}
 What's going on, and when?
 
 Look at the [combined calendar](http://hackeragenda.urlab.be/).
-
-####Mailinglist.
+  {% endmarkdown %}
+<h4>Mailinglist</h4>
+  {% markdown %}
 Different spaces have their own lists, but the general cross-space list is:
 
 "*42*  _For the answers to life, the universe and everything..._"
 
 You can [subscribe here](http://discuss.hackerspaces.be/listinfo.cgi/42-hackerspaces.be) for any technical or other questions.
-{% endmarkdown %}
-
-</ul>
-</div>
+  {% endmarkdown %}
 {% endblock %}
