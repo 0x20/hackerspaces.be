@@ -1,32 +1,56 @@
 {% extends "page.html" %}
 
 {% block content %}
-  <h1>{{ resource.meta.title }}</h1>
 
-  {% block article %}
-  {% endblock %}
-{% endblock %}
 
-{% block sidebar %}
-<h3>Infos</h3>
-<ul>
-  <li>
-    <strong>Website:</strong>
-    <a href="{{ resource.meta.site }}" title="{{ resource.meta.title }} homepage">
-      {{ resource.meta.site }}
-    </a>
-  </li>
-  <li><strong>Location:</strong> <a href="https://maps.google.com/?q={{ resource.meta.location|urlencode }}">{{ resource.meta.location }}</a></li>
-  {% if resource.meta.contact %}
-    <li><strong>Email:</strong> {{ resource.meta.contact }}</li>
-  {% endif %}
-  {% if resource.meta.irc %}
-    <li><strong>Irc:</strong> {{ resource.meta.irc }}</li>
-  {% endif %}
-  {% for name, val in resource.meta.extra %}
-    <li><strong>{{ name }}</strong>: {{val|markdown}}</li>
-  {% endfor %}
-</ul>
+<section class="fullscreen" style="background: url(../media/{{ resource.relative_path }}.jpg) no-repeat bottom center scroll;">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="" style="text-align: center">
+                    <h1 class="brand-heading"><a>{{ resource.meta.title }}</a></h1>
+                    <div class="bg-black padder">
+                      {% block article %}
+                      {% endblock %}
+                    </div>
+                    <div class="page-scroll">
+                        <a href="#hackerspace" class="btn btn-circle">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="hackerspace" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>Infos</h2>
+            <ul>
+              <li>
+                <strong>Website:</strong>
+                <a href="{{ resource.meta.site }}" title="{{ resource.meta.title }} homepage">
+                  {{ resource.meta.site }}
+                </a>
+              </li>
+              <li><strong>Location:</strong> <a href="https://maps.google.com/?q={{ resource.meta.location|urlencode }}">{{ resource.meta.location }}</a></li>
+              {% if resource.meta.contact %}
+                <li><strong>Email:</strong> {{ resource.meta.contact }}</li>
+              {% endif %}
+              {% if resource.meta.irc %}
+                <li><strong>Irc:</strong> {{ resource.meta.irc }}</li>
+              {% endif %}
+              {% for name, val in resource.meta.extra %}
+                <li><strong>{{ name }}</strong>: {{val|markdown}}</li>
+              {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
+
 {% endblock %}
 
 

@@ -1,0 +1,67 @@
+---
+    extends: "page.html"
+    title: "List of spaces"
+    created: 2013-04-14 00:25:00
+---
+
+{% block content %}
+
+
+<section class="fullscreen" style="background: url(../media/3party/img/big-map.jpg) no-repeat bottom center scroll;">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="" style="text-align: center">
+                    <h1 class="brand-heading">List of Belgian Hackerspaces</h1>
+                    <h2>(and their location)</h2>
+                    <div class="page-scroll">
+                        <a href="#first-list" class="btn btn-circle">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% for node in node.walk() %}
+{% if node.relative_path == "spaces" %}
+  {% for post in node.walk_resources()  %}
+    {% if not post.listing and not post.exclude %}
+      <section id="belgium" class="content-section text-center" >
+          <div style="background: url(../media/{{ post.relative_path }}.jpg) no-repeat bottom center scroll;">
+              <div class="container">
+                  <div class="col-lg-8 col-lg-offset-2">
+                    <h2><a href="{{ post.relative_path }}">{{ post.meta.title }}</a> {{ post.meta.city }}</h2>
+                      <ul>
+                        <li>
+                          <strong>Location:</strong>
+                          <a href="https://maps.google.com/?q={{ post.meta.location|urlencode }}">{{ post.meta.location }}</a>
+                        </li>
+                        {% if post.meta.contact %}
+                          <li><strong>Email:</strong> {{ post.meta.contact }}</li>
+                        {% endif %}
+                        {% if post.meta.irc %}
+                          <li><strong>Irc:</strong> {{ post.meta.irc }}</li>
+                        {% endif %}
+                        <li>
+                          <strong>Website:</strong>
+                          <a href="{{ post.meta.site }}" title="{{ post.meta.title }} homepage">{{ post.meta.site }}</a>
+                        </li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% endfor %}
+
+
+
+{% endblock %}
+
+

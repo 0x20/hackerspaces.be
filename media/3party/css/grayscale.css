@@ -270,9 +270,24 @@ body {
 * Custom CSS
 */
 
+.brand-heading a {
+    color: #fff;
+}
+
+.brand-heading a:hover {
+    color: #ccc;
+}
+
+.padder {
+    padding: 1em 3em;
+}
 
 .bg-white {
     background-color: rgba(255, 255, 255, 0.5);
+}
+
+.bg-black {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .btn-white {
