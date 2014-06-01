@@ -371,7 +371,7 @@ section.content-section > div {
 */
 
 .intro {
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    background: url(../img/intro-bg.jpg) no-repeat center center scroll;
 }
 
 .intro-body {

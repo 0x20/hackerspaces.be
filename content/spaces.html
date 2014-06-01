@@ -7,7 +7,7 @@
 {% block content %}
 
 
-<section class="fullscreen" style="background: url(../media/3party/img/big-map.jpg) no-repeat bottom center scroll;">
+<section class="fullscreen" style="background: url(../media/3party/img/big-map.jpg) no-repeat center center scroll;">
     <div class="intro-body">
         <div class="container">
             <div class="row">
@@ -31,7 +31,7 @@
   {% for post in node.walk_resources()  %}
     {% if not post.listing and not post.exclude %}
       <section id="belgium" class="content-section text-center" >
-          <div style="background: url(../media/{{ post.relative_path }}.jpg) no-repeat bottom center scroll;">
+          <div style="background: url(../media/{{ post.relative_path }}.jpg) no-repeat center center scroll;">
               <div class="container">
                   <div class="col-lg-8 col-lg-offset-2">
                     <h2><a href="{{ post.relative_path }}">{{ post.meta.title }}</a> {{ post.meta.city }}</h2>
