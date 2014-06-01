@@ -5,7 +5,7 @@
 ---
 {% block content %}
 <div class="row">
-<h2>Contact Details Of The Belgian Spaces.</h2>
+<h2>Contact details of the belgian spaces.</h2>
 {% for node in node.walk() %}
     {% if node.relative_path == "spaces" %}
         {% for post in node.walk_resources()  %}
@@ -14,8 +14,12 @@
 			<h4><a href="{{ post.relative_path }}">{{ post.meta.title }}</a></h4>
 				<ul>
 				<li><strong>Location:</strong> <a href="https://maps.google.com/?q={{ post.meta.location }}">{{ post.meta.location }}</a></li>
-				<li><strong>Email:</strong> {{ post.meta.contact }}</li>
-				<li><strong>Irc:</strong> {{ post.meta.irc }}</li>
+                {% if post.meta.contact %}
+				    <li><strong>Email:</strong> {{ post.meta.contact }}</li>
+                {% endif %}
+                {% if post.meta.irc %}
+				    <li><strong>Irc:</strong> {{ post.meta.irc }}</li>
+                {% endif %}
 				<li><strong>Website:</strong> <a href="{{ post.meta.site }}" title="{{ post.meta.title }} homepage">{{ post.meta.site }}</a></li>
 				</ul>
 
