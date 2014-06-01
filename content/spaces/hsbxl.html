@@ -1,17 +1,15 @@
-{% extends "page.html" %}
-{% hyde
-title: "Hackerspace Brussels"
-site: "http://www.hackerspace.be/"
-city: "St-Joost-ten-Noode"
-location: "rue moulin 40, 1210 St-Joost-ten-Noode, Brussels"
-contact: "contact@hackerspace.be"
-irc: "#hsbxl on irc.freenode.net"
-%}
+---
+    extends: "page.html"
+    default_block: article
 
-{% block article %}
-{% excerpt %}
-{% endexcerpt %}
-{% article %}
+    title: "Hackerspace Brussels"
+    site: "http://www.hackerspace.be/"
+    city: "St-Joost-ten-Noode"
+    location: "rue moulin 40, 1210 St-Joost-ten-Noode, Brussels"
+    contact: "contact@hackerspace.be"
+    irc: "#hsbxl on irc.freenode.net"
+---
+
 {% markdown %}
 #About HSBXL
 
@@ -26,7 +24,3 @@ There is still a lot to be done at this location, so if you feel like helping, p
 * Location: [rue moulin 40 molenstraat, 1210 St-Joost-ten-Noode, Brussels, Belgium](http://goo.gl/maps/hkRPE)
 * Site: [www.hackerspace.be](http://www.hackerspace.be)
 {% endmarkdown %}
-{% endarticle %}
-{% endblock %}
-																										
-

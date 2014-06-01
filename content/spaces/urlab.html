@@ -1,17 +1,15 @@
-{% extends "page.html" %}
-{% hyde
-title: "UrLab"
-site: "http://urlab.be/"
-city: "Brussels"
-location: "Avenue Buyl 131, 1050 Brussels"
-contact: "contact@urlab.be"
-irc: "irc.freenode.net#urlab"
-%}
+---
+    extends: "page.html"
+    default_block: article
 
-{% block article %}
-{% excerpt %}
-{% endexcerpt %}
-{% article %}
+    title: "UrLab"
+    site: "http://urlab.be/"
+    city: "Brussels"
+    location: "Avenue Buyl 131, 1050 Brussels"
+    contact: "contact@urlab.be"
+    irc: "irc.freenode.net#urlab"
+---
+
 {% markdown %}
 UrLab is the hackerspace of the [Université Libre de Bruxelles](http://ulb.ac.be). It was founded in the beginning of 2012 by students of many different backgrounds with the idea of bringing the hacker culture to their fellow ULB students.
 
@@ -31,5 +29,3 @@ Twitter : [twitter.com/UrLabBxl](https://twitter.com/UrLabBxl)
 
 Youtube : [youtube.com/user/Urlabbxl](https://www.youtube.com/user/Urlabbxl)
 {% endmarkdown %}
-{% endarticle %}
-{% endblock %}

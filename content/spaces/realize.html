@@ -1,17 +1,15 @@
-{% extends "page.html" %}
-{% hyde
-title: "Realize"
-site: "http://realizebxl.be/"
-city: "Saint-Gilles"
-location: "32 rue Metal, 1060 Saint-Gilles"
-contact: "info@realizebxl.be"
-irc: ""
-%}
+---
+    extends: "page.html"
+    default_block: article
 
-{% block article %}
-{% excerpt %}
-{% endexcerpt %}
-{% article %}
+    title: "Realize"
+    site: "http://realizebxl.be/"
+    city: "Saint-Gilles"
+    location: "32 rue Metal, 1060 Saint-Gilles"
+    contact: "info@realizebxl.be"
+    irc: ""
+---
+
 {% markdown %}
 Realize together an open community, a place and an atmosphere conducive to the emergence and especially the realization of ideas. To do this, we apply the following recipe:
 
@@ -25,5 +23,3 @@ Realize together an open community, a place and an atmosphere conducive to the e
 * site: [http://realizebxl.be/](http://realizebxl.be/)
 
 {% endmarkdown %}
-{% endarticle %}
-{% endblock %}

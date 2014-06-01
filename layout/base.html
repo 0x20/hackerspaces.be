@@ -2,10 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-	<title>{{ page.title }} - Hackespaces.be</title>
+	<title>{% block title %}{{ resource.meta.title }}{% endblock %} - Hackespaces.be</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	<base href="/">
 	<link rel="alternate" type="application/rss+xml" title="Hackerspaces Belgium" href="https://github.com/0x20/hackerspaces.be/commits/master.atom" />
@@ -27,13 +26,6 @@
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="../media/img/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="./ico/apple-touch-icon-57-precomposed.png">
-
-
-
  </head>
 
   <body>
@@ -44,7 +36,7 @@
 
 
 		{% block content %}
-		
+
 		{% endblock %}
 
 
@@ -63,40 +55,17 @@
 				<script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
 			<!--- rss/atom -->
 			<a href="https://github.com/0x20/hackerspaces.be/commits/master.atom">
-				<img alt="Atom Feed" style="border-width:0" src="../media/img/rss.png" title="Rss Feed For Your Convenience"/></a> 
+				<img alt="Atom Feed" style="border-width:0" src="../media/img/rss.png" title="Rss Feed For Your Convenience"/></a>
 			</a>
 			<!--- GitHub -->
 			<a href="https://github.com/0x20/hackerspaces.be">
-				<img alt="Atom Feed" style="border-width:0" src="../media/img/gh.png" title="Follow this on github"/></a> 
+				<img alt="Atom Feed" style="border-width:0" src="../media/img/gh.png" title="Follow this on github"/></a>
 			</a>
       </footer>
 
     </div> <!-- /container -->
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./js/jquery.js"></script>
-    <script src="./js/bootstrap-transition.js"></script>
-    <script src="./js/bootstrap-alert.js"></script>
-    <script src="./js/bootstrap-modal.js"></script>
-    <script src="./js/bootstrap-dropdown.js"></script>
-    <script src="./js/bootstrap-scrollspy.js"></script>
-    <script src="./js/bootstrap-tab.js"></script>
-    <script src="./js/bootstrap-tooltip.js"></script>
-    <script src="./js/bootstrap-popover.js"></script>
-    <script src="./js/bootstrap-button.js"></script>
-    <script src="./js/bootstrap-collapse.js"></script>
-    <script src="./js/bootstrap-carousel.js"></script>
-    <script src="./js/bootstrap-typeahead.js"></script>
-	
-
-		
-  <script type="text/javascript"> 
-    $(document).ready(function(){ 
-       });
-  </script>
-  		{% include "analytics.html" %}
+  	{% include "analytics.html" %}
 
   </body>
 </html>

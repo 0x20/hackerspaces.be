@@ -1,17 +1,15 @@
-{% extends "page.html" %}
-{% hyde
-title: "BHackspace"
-site: "http://wiki.bhackspace.be/"
-city: "Bastogne"
-location: "Bastogne"
-contact: "contact@bhackspace.be"
-irc: "#bhackspace on irc.geeknode.org"
-%}
+---
+    extends: "page.html"
+    default_block: article
 
-{% block article %}
-{% excerpt %}
-{% endexcerpt %}
-{% article %}
+    title: "BHackspace"
+    site: "http://wiki.bhackspace.be/"
+    city: "Bastogne"
+    location: "Bastogne"
+    contact: "contact@bhackspace.be"
+    irc: "#bhackspace on irc.geeknode.org"
+---
+
 {% markdown %}
 The BHackspace is a hackerspace located in Bastogne, Belgium.
 .
@@ -19,7 +17,3 @@ The BHackspace is a hackerspace located in Bastogne, Belgium.
 * Location: We meet every third friday of the month but we are looking for a new place so we can meet more often/freely.
 * Site: [wiki.bhackspace.be](http://wiki.bhackspace.be/)
 {% endmarkdown %}
-{% endarticle %}
-{% endblock %}
-																										
-

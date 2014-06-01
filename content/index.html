@@ -1,8 +1,8 @@
-{% extends "base.html" %}
-{% hyde
+---
+    extends: "page.html"
     title: "Main Page"
     created: 2013-04-14 00:25:00
-%}
+---
 {% block content %}
 <div class="row">
 <div class="span6">
@@ -13,7 +13,7 @@ A hackerspace (also referred to as a hacklab, makerspace, or hackspace) is a com
 
 Hackerspaces can be viewed as open community labs incorporating elements of machine shops, workshops and/or studios where hackers can come together to share resources and knowledge to build and make things.
 
-Many hackerspaces participate in the use and development of free software, open hardware, and alternative media. 
+Many hackerspaces participate in the use and development of free software, open hardware, and alternative media.
 {% endmarkdown %}
 
 </div>
@@ -22,15 +22,14 @@ Many hackerspaces participate in the use and development of free software, open 
 {% markdown %}
 ####Spaces in Belgium
 {% endmarkdown %}
-{% for node in page.node.walk %}
-{% if node.name == "spaces" %}
-	{% for post in node.walk_pages  %}
-	{% if not post.listing and not post.exclude %}
-			<li><a href="{{ post.url }}">{{ post.title }}</a> {{ post.city }}</li>
-
-	{% endif %}
-	{% endfor %}
-{% endif %}
+{% for node in node.walk() %}
+    {% if node.relative_path == "spaces" %}
+    	{% for post in node.walk_resources()  %}
+        	{% if not post.listing and not post.exclude %}
+        			<li><a href="{{ post.relative_path }}">{{ post.meta.title }}</a> {{ post.meta.city }}</li>
+        	{% endif %}
+    	{% endfor %}
+    {% endif %}
 {% endfor %}
 
 {% markdown %}
