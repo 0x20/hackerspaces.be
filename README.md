@@ -28,5 +28,5 @@ The script that's triggered on the server does :
 
 ## Wishlist
 
-* Fancy imageslider on frontpage (every site needs one ;-)
+* Fancy imageslider on frontpage (every site needs one ;-))
 * Logo's of spaces on the page.
