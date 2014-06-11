@@ -1,3 +1,0 @@
-[submodule "lib/tornado"]
-	path = lib/tornado
-	url = git://github.com/facebook/tornado.git

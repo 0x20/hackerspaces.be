@@ -1,0 +1,14 @@
+{% extends "page.html" %}
+{% block content %}
+
+<div class="row">
+    <div class="span12">
+        <h1>{{ resource.meta.title }}</h1>
+        {% block article %}
+        {% endblock %}
+    </div>
+</div>
+
+{% endblock %}
+
+

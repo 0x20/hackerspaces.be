@@ -1,17 +1,15 @@
-{% extends "page.html" %}
-{% hyde
-title: "OpenGarage"
-site: "http://www.meetup.com/OpenGarage/"
-city: "Borsbeek"
-location: "Floris Primslei 14, 2150 Borsbeek"
-contact: "@aliekens"
-irc: ""
-%}
+---
+    extends: "page.html"
+    default_block: article
 
-{% block article %}
-{% excerpt %}
-{% endexcerpt %}
-{% article %}
+    title: "OpenGarage"
+    site: "http://www.meetup.com/OpenGarage/"
+    city: "Borsbeek"
+    location: "Floris Primslei 14, 2150 Borsbeek"
+    contact: "@aliekens"
+    irc: ""
+---
+
 {% markdown %}
 The Open Garage is not a hackerspace in its pure essence, but a privately owned garage that opens every Thursday evening for everyone who wants to use the available infrastructure.
 We're usually a few nerds playing with electronics, 3d printers, CNC machinery, and have many various ongoing projects.
@@ -21,7 +19,3 @@ contact [@aliekens](https://twitter.com/aliekens) for details (address) or follo
 * Adress: [Floris Primslei 14, 2150 Borsbeek](http://goo.gl/maps/6jV8r)
 * Site: [meetup.com/OpenGarage](http://www.meetup.com/OpenGarage/)
 {% endmarkdown %}
-{% endarticle %}
-{% endblock %}
-																										
-

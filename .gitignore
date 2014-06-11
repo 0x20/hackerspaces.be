@@ -11,3 +11,4 @@ pylint*
 test_site
 site.log
 settings.pyc
+.hyde_deps
