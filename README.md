@@ -10,11 +10,12 @@ This repo gets synced with the site every hour, so if your pull request has been
 You are encouraged to write scripts, for instance, one that would pull a calender feed into git, and displays it nicely on the page. Or a script that checks twitterfeeds for tags and pushes that info to the repo.
 
 ## Basic Installation
-
+The main requirement, hyde, requires python 2.7 or above. Python3 and above are not yet supported.
     pip install -r requirements.txt
 
 # Usage
-The only command to execute is `hyde gen`. The static result will be in `deploy/`
+The only command to execute is `hyde gen`. The static result will be in `deploy/`.
+If you copy it to another location make sure to also copy the `media/` directory since it contains the stylesheet and images.
 
 While developping, it may be usefull to use the integrated server with `hyde serve -a localhost -p 8000`
 
