@@ -1,71 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
-	<title>{% block title %}{{ resource.meta.title }}{% endblock %} - Hackespaces.be</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-	<base href="/">
-	<link rel="alternate" type="application/rss+xml" title="Hackerspaces Belgium" href="https://github.com/0x20/hackerspaces.be/commits/master.atom" />
-    <!-- Le styles -->
-    <link href="../media/css/bootstrap.css" rel="stylesheet">
-    <link href="../media/css/custom.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-    </style>
-    <link href="./css/bootstrap-responsive.css" rel="stylesheet">
+    <title>{% block title %}{{ resource.meta.title }}{% endblock %} - Hackespaces.be</title>
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href="../media/3party/css/grayscale.css" rel="stylesheet">
 
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="../media/img/favicon.ico">
- </head>
+</head>
 
-  <body>
-  <div class="container">
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 
-		{% include "nav.html" %}
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="../">
+                <i class="fa fa-cogs"></i>  <span class="light">Hackerspaces</span>.be
+            </a>
+        </div>
+        {% block headerlinks %}
+        {% endblock %}
+    </div>
+    <!-- /.container -->
+</nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <section id="end-page">
+    </section>
 
 
+    <!-- Core JavaScript Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-		{% block content %}
+    <!-- Custom Theme JavaScript -->
+    <script src="../media/3party/js/grayscale.js"></script>
 
-		{% endblock %}
+</body>
 
-
-
- </div>
-      <hr>
-
-      <footer>
-			<!--- creativecommons -->
-			<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
-				<img alt="Creative Commons License" style="border-width:0" src="../media/img/cc.png" title="This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License"/>
-			</a>
-			<!--- cornify -->
-			<a href="http://www.cornify.com" onclick="cornify_add();return false;">
-				<img src="http://www.cornify.com/assets/cornify.gif" width="61" height="16" border="0" alt="Cornify" /></a>
-				<script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
-			<!--- rss/atom -->
-			<a href="https://github.com/0x20/hackerspaces.be/commits/master.atom">
-				<img alt="Atom Feed" style="border-width:0" src="../media/img/rss.png" title="Rss Feed For Your Convenience"/></a>
-			</a>
-			<!--- GitHub -->
-			<a href="https://github.com/0x20/hackerspaces.be">
-				<img alt="Atom Feed" style="border-width:0" src="../media/img/gh.png" title="Follow this on github"/></a>
-			</a>
-      </footer>
-
-    </div> <!-- /container -->
-
-  	{% include "analytics.html" %}
-
-  </body>
 </html>

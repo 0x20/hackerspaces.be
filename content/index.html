@@ -3,49 +3,133 @@
     title: "Main Page"
     created: 2013-04-14 00:25:00
 ---
+
 {% block content %}
-<div class="row">
-<div class="span6">
 
-{% markdown %}
-####What is a hackerspace?
-A hackerspace (also referred to as a hacklab, makerspace, or hackspace) is a community-operated physical space where people with common interests, often in computers, technology, science, digital art or electronic art, can meet, socialise and/or collaborate.
+<section class="intro fullscreen">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="" style="text-align: center">
+                    <h1 class="brand-heading">Hackerspace.be</h1>
+                    <p class="intro-text">A hackerspace is a community-operated physical space where people with common interests, often in computers, technology, science, digital art or electronic art, can meet, socialise and/or collaborate.</p>
+                    <div class="page-scroll">
+                        <a href="#hackerspace" class="btn btn-circle">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-Hackerspaces can be viewed as open community labs incorporating elements of machine shops, workshops and/or studios where hackers can come together to share resources and knowledge to build and make things.
+<section id="hackerspace" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>Hackerspace?</h2>
+            <p>A hackerspace (also referred to as a hacklab, makerspace, or hackspace) is a community-operated physical space where people with common interests, often in computers, technology, science, digital art or electronic art, can meet, socialise and/or collaborate.</p>
 
-Many hackerspaces participate in the use and development of free software, open hardware, and alternative media.
-{% endmarkdown %}
+            <p>Hackerspaces can be viewed as open community labs incorporating elements of machine shops, workshops and/or studios where hackers can come together to share resources and knowledge to build and make things.</p>
 
-</div>
-<div class="span6">
-<ul>
-{% markdown %}
-####Spaces in Belgium
-{% endmarkdown %}
-{% for node in node.walk() %}
-    {% if node.relative_path == "spaces" %}
-    	{% for post in node.walk_resources()  %}
-        	{% if not post.listing and not post.exclude %}
-        			<li><a href="{{ post.relative_path }}">{{ post.meta.title }}</a> {{ post.meta.city }}</li>
-        	{% endif %}
-    	{% endfor %}
-    {% endif %}
-{% endfor %}
+            <p>Many hackerspaces participate in the use and development of free software, open hardware, and alternative media.</p>
+        </div>
+    </div>
+</section>
 
-{% markdown %}
-####Agenda
-What's going on, and when?
+<section id="belgium" class="content-section text-center">
+    <div class="map-section">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Spaces in Belgium</h2>
+                <p class="bg-white">There are more and more hackerspaces in Belgium every year!<br>
+                    There is one near you!</p>
+                <a href="spaces.html" class="btn btn-default btn-white btn-lg">
+                    <i class="fa fa-flask"></i> Show me the list
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
-Look at the [combined calendar](http://hackeragenda.urlab.be/).
+<section id="about" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>About</h2>
+            <p>
+                This site aims to provide a list of hacker/maker/.../spaces in Belgium.<br>
+                If you want to add your space fork the <a href="https://github.com/0x20/hackerspaces.be"> GitHub Repo</a> and send a pull request.
+            </p>
+            <h2>Contact</h2>
+            <p>
+                Different spaces have their own lists, but the general cross-space list is:
+                “42 For the answers to life, the universe and everything…”<br>
+                You can <a href="http://discuss.hackerspaces.be/listinfo.cgi/42-hackerspaces.be">subscribe here</a> for any technical or other questions.
+            </p>
+            <ul class="list-inline banner-social-buttons">
+                <li><a href="https://github.com/0x20/hackerspaces.be" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                </li>
+                <li><a href="http://discuss.hackerspaces.be/listinfo.cgi/42-hackerspaces.be" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name">Mailing-list</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-####Mailinglist.
-Different spaces have their own lists, but the general cross-space list is:
+<section id="agenda" class="content-section text-center">
+    <div class="hackeragenda-section">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+                <p><br><br><br></p>
+                <a href="http://hackeragenda.be/" class="btn btn-default btn-white btn-fat btn-lg">
+                    <i class="fa fa-calendar"></i> All hacker events in Belgium
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
-"*42*  _For the answers to life, the universe and everything..._"
+ <section id="own" class="content-section text-center">
+    <div class="own-section">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>More hackerspaces!</h2>
+                <p>There isn’t a space near you? You want to create your own space?</p>
+                <p>Here are some helpful ressources:<br>
+                    <a href="http://hackerspaces.org/">hackerspaces.org</a>,
+                    <a href="http://hackerspaces.org/images/8/8e/Hacker-Space-Design-Patterns.pdf">Hackerspace design-patterns</a>,
+                    <a href="https://www.youtube.com/watch?v=WkiX7R1-kaY">TED Talk</a>
+                </p>
+                <p>
+                    And don’t forget to announce it on the <a href="http://discuss.hackerspaces.be/listinfo.cgi/42-hackerspaces.be">general mailing list</a>.
+                </p>
+        </div>
+    </div>
+</section>
 
-You can [subscribe here](http://discuss.hackerspaces.be/listinfo.cgi/42-hackerspaces.be) for any technical or other questions.
-{% endmarkdown %}
 
-</ul>
+{% endblock %}
+
+
+{% block headerlinks %}
+<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+    <ul class="nav navbar-nav">
+        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+        <li class="hidden">
+            <a href="#page-top"></a>
+        </li>
+        <li class="page-scroll">
+            <a href="#hackerspace">Hackerspace?</a>
+        </li>
+        <li class="page-scroll">
+            <a href="#belgium">Spaces in Belgium</a>
+        </li>
+        <li class="page-scroll">
+            <a href="#about">About</a>
+        </li>
+        <li class="page-scroll">
+            <a href="#agenda">Agenda</a>
+        </li>
+    </ul>
 </div>
 {% endblock %}
