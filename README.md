@@ -1,7 +1,7 @@
 hackerspaces.be
 ===============
 
-Git backend for the content of http://hackerspaces.be feel free to fork, and to send me updates. Once I know you're not a spammer, you can get commit rights.
+Git backend for the content of https://hackerspaces.be feel free to fork, and to send me updates. Once I know you're not a spammer, you can get commit rights.
 
 If you just want to add a new space it's easy, look into the `hackerspaces.be/content/spaces` folder, copy one and fill in your details. Editing an exiting space works the same way. The content is formatted with markdown, [tutorial here](http://daringfireball.net/projects/markdown/basics).
 
