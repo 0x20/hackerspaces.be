@@ -19,6 +19,9 @@ The only command to execute is `hyde gen`. The static result will be in `deploy/
 If you copy it to another location make sure to also copy the `media/` directory since it contains the stylesheet and images.
 
 While developping, it may be usefull to use the integrated server with `hyde serve -a localhost -p 8000`
+Or by using Docker:
+	docker run -it  -p 8080:8080 -v $(pwd):/code nyxcharon/docker-hyde bash`
+	hyde serve -a <ip of container>
 
 ## Deployment
 
