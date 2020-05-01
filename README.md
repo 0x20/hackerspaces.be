@@ -1,3 +1,9 @@
+# DEPRECATED 
+The Git backend has moved to https://gitlab.com/hackerspacesbe/website/ and Hugo static site generation.  
+Commits in this repo will not be pushed to the hackerspaces.be website.
+
+***
+
 hackerspaces.be
 ===============
 
